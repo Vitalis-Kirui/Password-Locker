@@ -28,4 +28,19 @@ def create_user(username, password):
         """
         return User.users_exists(username)
 
-        #End of user class functions
+    #End of user class functions
+
+    #Function for Credentials class
+
+    def create_account(account_type, username, password):
+        """
+        Function that helps users create account.
+        """
+        new_account = Credentials(account_type, username, password)
+        return new_account
+
+    def save_account(credentials):
+        """
+        Function for saving the new account credentials
+        """
+        credentials.save_account()
