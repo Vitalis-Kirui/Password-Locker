@@ -131,7 +131,7 @@ def main():
 
             user_operation = input().lower()
 
-            if short_code == 'ca':
+            if user_operation == 'ca':
                 print("New Credential Account")
                 print("\n")
 
@@ -165,6 +165,26 @@ def main():
                     print("\n")
                     print("Please Create a password for your account.")
                     password = input()
+
+                #Saving the new credentials
+                save_account(create_account(account_type, username, password))
+                print('\n')
+                print(f"New account: {account_type}  with user name : {username} created :{password}")
+                print('\n')
+
+            elif user_operation == 'da':
+                if display_account():
+                    print("Here is a list of all your accounts")
+                    print('\n')
+
+                    for credentials in display_account():
+                        print(
+                            f"{credentials.account_type} |   {credentials.username} |   {credentials.password}")
+
+                else:
+                    print('\n')
+                    print("We can't seem to find any accounts saved in your account. \nMake sure have have successfuly created first.")
+                print('\n')
 
 
 
