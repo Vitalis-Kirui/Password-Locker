@@ -23,3 +23,12 @@ class Credentials:
         Deleting credentials method from our Credentials list.
         """        
         Credentials.credentials_list.remove(self)
+
+    @classmethod
+    def find_credentials(cls,account_type):
+        """
+        Class method that finds credentials by taking in user account type and returns credentials related to the account.
+        """
+        for credentials in cls.credentials_list:
+            if credentials.account_type == account_type:
+                return credentials

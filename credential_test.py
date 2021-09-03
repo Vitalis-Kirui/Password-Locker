@@ -54,5 +54,17 @@ class TestCredentials(unittest.TestCase):
         self.new_credentials.delete_credentials()
         self.assertEqual(len(Credentials.credentials_list), 1)
 
+    def test_find_credentials(self):
+        """
+        A test method to check if our find credentials function is working.
+        """
+        self.new_credentials.save_credentials()
+        test_credential = Credentials("F-Society", "Free Society", "Fuck#Society")
+        test_credential.save_credentials()
+
+        found_credentials = Credentials.find_credentials("F-Society")
+
+        self.assertEqual(found_credentials.password, test_credential.password)
+
 if __name__ == '__main__':
     unittest.main()
