@@ -178,12 +178,26 @@ def main():
                     print('\n')
 
                     for credentials in display_account():
-                        print(
-                            f"{credentials.account_type} |   {credentials.username} |   {credentials.password}")
+                        print(f"{credentials.account_type} |   {credentials.username} |   {credentials.password}")
 
                 else:
                     print('\n')
                     print("We can't seem to find any accounts saved in your account. \nMake sure have have successfuly created first.")
+                    print('\n')
+
+            elif user_operation== 'fa':
+                print("Enter the account name you would like to find.")
+
+                find_accounts = input()
+                if check_existance(find_accounts):
+                    search_account = find_account(find_accounts)
+                    print(f"{search_account.account_type}")
+                    print("\n")
+
+                    print(f"Account Name ~~~>{search_account.account_type}")
+                    print(f"Username ~~~>{search_account.username}")
+                else:
+                    print("We can find the account you are looking for! \nCheck the account you provided and try again.")
                 print('\n')
 
 
