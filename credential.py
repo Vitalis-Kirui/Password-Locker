@@ -42,3 +42,10 @@ class Credentials:
             if credentials.account_type == account_type:
                 return True
         return False
+
+    @classmethod
+    def display_credentials(cls):
+        """
+        Method to return credentials list.
+        """
+        return cls.credentials_list
