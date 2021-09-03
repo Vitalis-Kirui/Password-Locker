@@ -4,10 +4,10 @@ class Credentials:
     """
     credentials_list = []
 
-    def __init__(self, account_name, username, password):
+    def __init__(self, account_type, username, password):
         """
         Init method for initializing user credentials objects
         """
-        self.account_name = account_name
+        self.account_type = account_type
         self.username = username
         self.password = password
