@@ -200,11 +200,28 @@ def main():
                     print("We can find the account you are looking for! \nCheck the account you provided and try again.")
                 print('\n')
 
+            elif user_operation == 'dl':
+                print("Enter name of account to delete")
+                find_accounts = input()
+                if check_existance(find_accounts):
+                    search_account = find_account(find_accounts)
+                    delete_account(search_account)
+                    print(
+                        f"{search_account.account_type}Account deleted successfully")
+                else:
+                    print('\n')
+                    print(
+                        "We can find the account you are looking for! \nCheck the accounts you have and try again.")
+
+            elif user_operation == "ex":
+                print("Thanks for choosing Password Locker. Bye.")
+                break
+
 
 
 
             else:
-                print("I really didn't get that. Please make sure you use the abbreviations to perform an operation.")
+                print("I  didn't get that. Please make sure you use the abbreviations to perform an operation.")
 
     else:
         print("That account does not exist. Please create one")
