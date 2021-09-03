@@ -31,3 +31,13 @@ class User:
         for user in cls.users_list:
             if user.username ==username:
                 return user
+
+    @classmethod
+    def users_exists(cls, username):
+        """
+        A method to check if user's list exists.
+        """
+        for user in cls.users_list:
+            if user.username == username:
+                return True
+        return False
