@@ -127,6 +127,25 @@ def main():
             print("Use these abbreviations to perfom operations. : \n\nca - create a new account credential, \nda - display account, \nfa -find an account, \ndl - delete account, \nex -exit the account list ")
             print('\n')
 
+            user_operation = input().lower()
+
+            if short_code == 'ca':
+                print("New Credential Account")
+                print("\n")
+
+                print("Enter Account Type")
+                account_type = input()
+
+                print("Enter it's Username")
+                username = input()
+
+            else:
+                print("I really didn't get that. Please make sure you use the abbreviations to perform an operation.")
+
+    else:
+        print("That account does not exist. Please create one")
+        print('\n')
+
 
 
 
