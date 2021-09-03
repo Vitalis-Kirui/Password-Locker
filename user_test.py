@@ -76,5 +76,11 @@ class TestUser(unittest.TestCase):
 
         self.assertTrue(users_exists)
 
+    def test_display_users(self):
+        """
+        A testing method to test if display users function does display users list.
+        """
+        self.assertEqual(User.display_users(), User.users_list)
+
 if __name__ == '__main__':
     unittest.main()
