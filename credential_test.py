@@ -66,5 +66,17 @@ class TestCredentials(unittest.TestCase):
 
         self.assertEqual(found_credentials.password, test_credential.password)
 
+    def test_credentials_exists(self):
+        """
+        Test to check what credentials exists function returns when checking if credentials exists in our credentials list.
+        """
+        self.new_credentials.save_credentials()
+        test_credential = Credentials("F-Society", "Free Society", "Fuck#Society")
+        test_credential.save_credentials()
+
+        credentials_exists = Credentials.credentials_exists("F-Society")
+
+        self.assertTrue(credentials_exists)
+
 if __name__ == '__main__':
     unittest.main()
