@@ -16,17 +16,17 @@ def save_user_main(user):
     """
     user.save_user()
 
-def find_user_main(username):
+def find_user_main(username, password):
     """
     Function to find user by username and returns user's credentials.
     """
-    return User.find_user(username)
+    return User.find_user(username, password)
 
-def check_existing_users(username):
+def check_existing_users(username, password):
     """
     Function to check users exists using their usernames
     """
-    return User.users_exists(username)
+    return User.users_exists(username, password)
 
 #End of user class functions
 
@@ -105,6 +105,30 @@ def main():
 
     print(f"Hello {username}, Thank you for creating an account with us.")
     print('\n')
+
+    print("Proceed to Login")
+    print('\n')
+
+    print("Enter your username:")
+    account_username = input()
+
+    print("Enter your password:")
+    account_password = input()
+    print('\n')
+
+    if check_existing_users(account_username, account_password):
+        """
+        Function to check if the user provided in login exists in the users list.
+        """
+        get_user = find_user_main(account_username, account_password)
+
+        while True:
+            print("\n")
+            print("Use these abbreviations to perfom operations. : \n\nca - create a new account credential, \nda - display account, \nfa -find an account, \ndl - delete account, \nex -exit the account list ")
+            print('\n')
+
+
+
 
 if __name__ == '__main__':
     main()
