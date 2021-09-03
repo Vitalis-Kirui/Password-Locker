@@ -81,3 +81,30 @@ def password_choice(quiz):
     while user_choice not in ("yes", "no"):
         user_choice = input(quiz).lower()
     return user_choice
+
+#MAIN FUNCTION
+def main():
+    """
+    Main function majorly for user interactions.
+    """
+    print("Hello there! Welcome to password locker. \nLet us remember and keep your password save for you.")
+    print('\n')
+    print("First, let's get you set up your account.")
+    print('\n')
+    print("Please follow the steps to create an account with Password Locker.")
+    print('\n')
+
+    print("Create a username")
+    username = input()
+    print("Create password for you Password Locker account.")
+    password = input()
+
+    save_user_main(create_user(username, password))
+    print('\n')
+    print('\n')
+
+    print(f"Hello {username}, Thank you for creating an account with us.")
+    print('\n')
+
+if __name__ == '__main__':
+    main()
