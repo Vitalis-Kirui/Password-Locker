@@ -64,5 +64,17 @@ class TestUser(unittest.TestCase):
 
         self.assertEqual(found_user.password, testing_user.password)
 
+    def test_users_exists(self):
+        """
+        Method to test if the users_exists function is geting the users list.
+        """
+        self.new_user.save_user()
+        testing_user = User("Kipyegon", "PyegonPtalz#75")
+        testing_user.save_user()
+
+        users_exists = User.users_exists("Kipyegon")
+
+        self.assertTrue(users_exists)
+
 if __name__ == '__main__':
     unittest.main()
