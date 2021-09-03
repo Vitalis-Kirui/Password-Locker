@@ -43,7 +43,7 @@ def create_user(username, password):
         """
         Function for saving the new account credentials
         """
-        credentials.save_account()
+        credentials.save_credentials()
 
     def find_account(account_type):
         """
@@ -56,3 +56,17 @@ def create_user(username, password):
         Function for checking if an account exists using account tpe name.
         """
         return Credentials.credentials_exists(account_type)
+
+    def delete_account(credentials):
+        """
+        Function deleting account
+        """
+        credentials.delete_credentials()
+        
+    def display_account():
+        """
+        Function that returns all saved account credentials.
+        """
+        return Credentials.display_credentials()
+
+    #End of credential class functions
