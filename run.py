@@ -44,3 +44,15 @@ def create_user(username, password):
         Function for saving the new account credentials
         """
         credentials.save_account()
+
+    def find_account(account_type):
+        """
+        Function for finding using the type of account name.
+        """
+        return Credentials.find_credentials(account_type)
+
+    def check_existance(account_type):
+        """
+        Function for checking if an account exists using account tpe name.
+        """
+        return Credentials.credentials_exists(account_type)
