@@ -1,6 +1,8 @@
 #!/usr/bin/env python3.8
 from user import User
 from credential import Credentials
+import random
+import string
 
 #User class functions
 def create_user(username, password):
@@ -138,6 +140,34 @@ def main():
 
                 print("Enter it's Username")
                 username = input()
+                
+                #Password generation
+                password_creation = password_choice(
+                    "Would you like to have your password generated?(yes/no)"
+                )
+
+                if password_creation == "yes":
+                    """
+                    Autogenerate password code.
+                    """
+                    value = 16
+                    lower = string.ascii_lowercase
+                    upper = string.ascii_uppercase
+                    num = string.digits
+                    all = lower + upper + num
+                    temp = random.sample(all, value)
+                    password = "".join(temp)
+
+                else:
+                    """
+                    Password created by user.
+                    """
+                    print("\n")
+                    print("Please Create a password for your account.")
+                    password = input()
+
+
+
 
             else:
                 print("I really didn't get that. Please make sure you use the abbreviations to perform an operation.")
