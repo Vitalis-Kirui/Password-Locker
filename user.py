@@ -16,3 +16,9 @@ class User:
         This is a save method for saving newly created objects.
         """
         User.users_list.append(self)
+
+    def delete_user(self):
+        """
+        A delete method for deleting a user from the users list.
+        """
+        User.users_list.remove(self)
