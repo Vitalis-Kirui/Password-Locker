@@ -39,12 +39,12 @@ Then follow the following 2 steps:
 
 ## User Operations Short-Codes
 
-* Keywords:
-    **ca**: To create account credentials.
-    **da**: To displays saved credentials.
-    **fa**: To find a specific credential details.
-    **dl**: To delete a specific credential details.
-    **ex**: To exit/log out user out of password locker account.
+* Abbreviations:
+    * **ca**: To create account credentials.
+    * **da**: To displays saved credentials.
+    * **fa**: To find a specific credential details.
+    * **dl**: To delete a specific credential details.
+    * **ex**: To exit/log out user out of password locker account.
 
 ## Known Bugs
 
