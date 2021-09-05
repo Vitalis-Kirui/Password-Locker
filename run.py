@@ -256,7 +256,7 @@ def main():
                     search_account = find_account(find_accounts)
                     delete_account(search_account)
                     print(
-                        f"{search_account.account_type}Account deleted successfully")
+                        f"{search_account.account_type} account deleted successfully")
                 else:
                     print('\n')
                     print(
